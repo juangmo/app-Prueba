@@ -20,11 +20,11 @@ export class ProyectoService {
                     .catch(this.handleError);
   }
 
-  addProyecto (name: string): Promise<Proyecto> {
+  addProyecto (project: Proyecto): Promise<Proyecto> {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
 
-    return this.http.post(this.proyectosUrl, { name }, options)
+    return this.http.post(this.proyectosUrl, { project }, options)
                .toPromise()
                .then(this.extractData)
                .catch(this.handleError);

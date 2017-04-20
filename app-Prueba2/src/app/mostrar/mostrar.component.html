@@ -4,7 +4,7 @@
     <th>descripcion</th> 
   </tr>
 
-  <tr *ngFor="let proyecto of proyectos">
-    <th >{{proyecto.name}}</th>
-    <th></th>
+  <tr *ngFor="let proyecto of proyectos" >
+    <th >{{proyecto.project.name}}</th>
+    <th> {{proyecto.project.description}}</th>
   </tr>

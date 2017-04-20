@@ -10,16 +10,16 @@ import { ProyectoService }       from '../services/project.service';
 })
 export class ProyectoComponent {
   errorMessage: string;
-  proyectos: Proyecto[];
-  mode = 'Promise';
+  
+  project:Proyecto= new Proyecto(0,'','')
 
   constructor(private proyectoService: ProyectoService) { }
  
-  addProyecto (name: string) {
-    if (!name) { return; }
-    this.proyectoService.addProyecto(name)
+  addProyecto (projectInsert: Proyecto) {
+    if (!projectInsert) { return; }
+    this.proyectoService.addProyecto(projectInsert)
                      .then(
-                       proyecto  => this.proyectos.push(proyecto),
+                      
                        error =>  this.errorMessage = <any>error);
   }
 }

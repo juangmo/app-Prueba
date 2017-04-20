@@ -4,13 +4,16 @@
       Proyecto
     </div>
   
-  <div *ngFor="let proyecto of proyectos">{{proyecto.name}}</div>
+ 
 
     <div class="panel-body">
       <form>
         <div class="form-group">
           <label for="codigo">Nombre del proyecto</label>
-          <input  type="text" class="form-control" id="codigo" name="codigo"  #newProyectoName
+          <input  type="text" class="form-control" id="codigo" name="codigo"
+          required
+          [(ngModel)]="project.name" 
+            #newProyectoName
           ngModel #codigo="ngModel" sin-espacios>
 
         <div *ngIf="codigo.errors">
@@ -23,13 +26,14 @@
 
         <div class="form-group">
           <label for="nombre">Descripcion del proyecto</label>
-          <textarea rows="20" cols="50" type="text" class="form-control" id="nombre" name="nombre" ngModel #nombre="ngModel"
-           required #spy
+          <textarea rows="20" cols="50" type="text" class="form-control" id="nombre" name="nombre" 
+          required
+          [(ngModel)]="project.description"
           ></textarea>
 
         </div>
         <div> 
-          <button (click)="addProyecto(newProyectoName.value); newProyectoName.value=''">Guardar</button>
+          <button (click)="addProyecto(project)">Guardar</button>
         </div>
 
         <p class="error" *ngIf="errorMessage">{{errorMessage}}</p>
