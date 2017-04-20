@@ -1,0 +1,47 @@
+.container{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 50px;
+
+}
+
+button{
+  background: black;
+  border: 0;
+  text-decoration: none;
+  text-align: center;
+  height: 50px;
+  font-size: 16px;
+  color: white;
+}
+
+
+nav{
+  display: inline-block;
+  width:  100%;
+  background: #010000;
+
+}
+
+ul li{
+  display:inline;
+  float: left;
+  margin:;
+}
+
+ul li a{
+  font-size: 16px;
+  display: block;
+  line-height: normal;
+  text-align: center;
+  background: #000000;
+  color: #ffffff;
+  padding: 15px 20px;
+}
+
+ul li a:hover {
+  background: #ffffff;
+  color: #010000;
+
+}

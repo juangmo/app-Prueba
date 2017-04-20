@@ -1,0 +1,25 @@
+.container{
+background: #00ff00 url("http://www.tododesign.es/empresa/fondo_cabecera.png") ;
+background-color: #2f98ba;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+flex-direction: row;
+align-items: center;
+width: 100%;
+
+}
+
+.titulo{
+  width: 50%;
+  text-align: center;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+img{
+  width: 30%;
+  padding: 20px;
+}

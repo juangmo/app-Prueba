@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Formulario
+    </div>
+    <div class="panel-body">
+      <form>
+        <div class="form-group">
+          <label for="codigo">Codigo</label>
+          <input type="text" class="form-control" id="codigo" name="codigo"
+          ngModel #codigo="ngModel" sin-espacios>
+
+        <div *ngIf="codigo.errors">
+          <div *ngIf="codigo.errors.sinEspacios" class="alert alert-danger">
+            No se permite el uso de espacios
+          </div>
+        </div>
+
+
+
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" ngModel #nombre="ngModel"
+           required #spy
+          >
+          <div *ngIf="nombre.touched && !nombre.valid" class="alert alert-danger">
+            *El nombre es requerido
+          </div>
+
+
+        </div>
+    <div ngModelGroup="contacto" #contacto="ngModelGroup">
+        <div class="form-group">
+          <label for="telefono">Telefono</label>
+          <input type="text" class="form-control" id="telefono" name="telefono" ngModel #telefono>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="text" class="form-control" id="email" name="email" ngModel #email>
+        </div>
+    </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+    </form>
+  </div>
+</div>
+</div>
+
+Nombre: {{spy.className}}<br>
